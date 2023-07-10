@@ -1,7 +1,7 @@
-function titleBox() {
+export function TitleBox() {
     return (
     <div className="myTitleBox">
-      <h1>My todo app</h1>
+      <h1>My To Do App</h1>
     </div>
     )
 

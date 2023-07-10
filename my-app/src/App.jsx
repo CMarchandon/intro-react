@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import {titleBox} from './assets/title'
-import './App.css'
+import {TitleBox} from './assets/TitleBox.jsx';
+import {InputAdd} from './assets/InputAdd.jsx';
+import {ToDoList} from './assets/Todos.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    function App() {
-      inputAdd();
-      toDoList();
-      titleBox();
-      return App()
-      ;
-    }
-  )
+    <>
+      <TitleBox></TitleBox>
+      <InputAdd></InputAdd>
+      <ToDoList></ToDoList>
+    </>
+  );
 }
 
-export default App
+export default App;
