@@ -12,6 +12,11 @@ function App() {
     setItems ([...items, inpuTodo.value]);
   }
 
+  function deleteItemFromToDoList(index) {
+    const updatedItems = [...items];
+    updatedItems.splice(index, 1);
+    setItems(updatedItems);
+  }
 
   return (
     <>
@@ -20,7 +25,7 @@ function App() {
       <ul>
         {items.map((item,i) => {
         return (
-          <li key={i}><input type="radio"/>{item}</li>
+          <li key={i}><input type="checkbox"/>{item} <i onClick={()=>deleteItemFromToDoList()} class="fa-solid fa-trash"></i></li>
         )
       
       })}
